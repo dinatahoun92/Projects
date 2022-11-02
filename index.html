@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:900|Marriweather&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Manipulating The DOM</title>
+</head>
+<body id="top">
+    <header class="page__header">
+        <nav class="navbar__menu">
+            <ul id="navbar__list">
+                <li>
+                    <a class="menu__link link__active" href="#section1" data-section-id="section1">Section 1</a>
+                </li>
+                <li>
+                    <a class="menu__link link__active" href="#section2" data-section-id="section2">Section 2</a>
+                </li>
+                <li>
+                    <a class="menu__link link__active" href="#section3" data-section-id="section3">Section 3</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <header class="main__hero">
+            <h1>Landing Page
+                <button class="add_new_section" onclick="addNewSection()">Add New Section</button>
+            </h1>
+        </header>
+    </main>
+
+    <section class="landing__contanier">
+        
+    </section>
+
+    <footer class="page__footer">
+        <p class="footer-title">Copyrights @ <span>Udacity</span></p>
+        <a href="#top">Top</a>
+    </footer>
+    
+    <script src="js/app.js"></script>
+        
+</body>
+</html>

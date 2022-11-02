@@ -1,0 +1,364 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(136, 203, 171);
+    background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0% , rgba(0, 13, 60, 1) 100%);
+    margin: 0;
+    font-family: 'Marriweather', serif;
+    color: #fff
+}
+
+/*@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:900|Marriweather&display=swap');*/
+
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 3em;
+    margin: 2em 1rem;
+}
+
+@media only screen and (min-width: 35em) {
+    h1 {
+        font-size: 5.5em;
+        margin: 1.5em 5rem 2em;
+    }
+}
+
+h2 {
+    border-bottom: 1px solid #cc1;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 3.5em;
+    color: #fff;
+}
+
+p {
+    line-height: 1.5em;
+    color: #eee;
+}
+
+main {
+    margin: 10vh 1.3em 10vh;
+}
+
+.main-hero {
+    min-height: 40vh;
+    padding-top: 3.3em;
+}
+
+
+/*header {
+    background-color: white;
+    width: 100%;
+    height: 13%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}*/
+
+.navbar__menu ul {
+    padding-left: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.navbar__menu li {
+    display: inline-block;
+}
+
+#navbar__list li {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #000;
+}
+
+.navbar__menu .menu__link {
+    display: block;
+    padding: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar__menu .menu__link:hover, .link__active {
+    background: #4e7475;
+    color: #fff !important;
+    transition: ease 0.5s all;
+
+}
+
+.page__header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 7;
+}
+
+.add_new_section {
+    color: #000;
+    background-color: #eee;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 45px;
+    transition: 1s ease;
+}
+
+.add_new_section:hover {
+    background-color: #cdcfd6;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+section {
+    min-height: 80vh;
+    position: relative;
+}
+
+/*main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+main header .main__hero {
+    color: #fff;
+    font-size: 5em;
+    font-weight: 900 bold;
+    background-color: darkblue;
+}
+
+section {
+    padding: 100px 100px;
+}*/
+
+.landing__container {
+    padding: 1.3em;
+    text-align: left;
+}
+
+@media only screen and (min-width: 35em) {
+    .landing__container {
+        max-width: 50em;
+        padding: 3.5em;
+    }
+}
+
+section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+section:nth-of-type(odd) .landing__container::before {
+    content: '';
+    background: rgb(255, 255, 255, 0.187);
+    position: absolute;
+    z-index: -7;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.7s all;
+}
+
+section:nth-of-type(even) .landing__container::before {
+    content: '';
+    background: rgb(255, 255, 255);
+    background: linear-gradient(1deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
+    position: absolute;
+    top: 2.5em;
+    right: 2.5em;
+    z-index: -7;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.7s all;
+}
+
+section:nth-of-type(3n) .landing__container::after {
+    content: '';
+    background: rgb(255, 255, 255);
+    background: linear-gradient(1deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -7;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.7s all;
+}
+
+section:nth-of-type(3n + 1) .landing__container::after {
+    content: '';
+    background: rgb(255, 255, 255);
+    background: linear-gradient(1deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
+    position: absolute;
+    right: 20vw;
+    bottom: -5em;
+    z-index: -7;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.7s all;
+}
+
+section.your-active-class {
+    background: rgb(136, 203, 157 / 37%);
+    transition: all 0.7s ease-in;
+}
+
+section.your-active-class .landing__container::before {
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards;
+}
+
+section.your-active-class .landing__container::after {
+    opacity: 1;
+    animation: rotate 6s linear 0s infinite forwards reverse;
+}
+
+/*.title1 {
+    display: flex;
+    justify-content: left;
+    color: lightgrey;
+    font-size: 2em;
+    font-weight: 600 bold;
+}
+
+.title2 {
+    display: flex;
+    justify-content: center;
+    color: lightgray;
+    font-size: 2em;
+    font-weight: 600 bold;
+}
+
+.content p {
+    font-size: 1.2em;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+}*/
+
+.page__footer {
+    display: flex;
+    background-color: #000;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.page__footer-title p {
+    font-size: 3.5em;
+    font-weight: 900;
+    color: #fff;
+}
+
+.page__footer-title p span {
+    color: red;
+}
+
+.page__footer a {
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #fff;
+    transition: 1s ease;
+}
+
+.page__footer a:hover {
+    color: yellow;
+    transform: scale(1.2);
+}
+
+/*.mystyle{
+    width: 100%;
+    padding: 25px;
+    background-color: coral;
+    color: white;
+    font-size: 25px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.active, .btn:hover {
+    background-color: #666;
+    color: #fff;
+}*/
+
+
+.scroll__top:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.display__none {
+    display: none;
+}
+
+
+
+
+@media (max-width:1023px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    .navigation {
+        padding-left: 10px;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .title1 {
+        font-size: 1.6em;
+    }
+
+    .title2 {
+        font-size: 1.6em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-wwidth : 641px) {
+    body {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width:300px) {
+    body {
+        font-size: 10px;
+    }
+}
